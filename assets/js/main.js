@@ -56,7 +56,7 @@ function renderProjects() {
             ${p.stack.length > 3 ? `<span class="chip">+${p.stack.length - 3} more</span>` : ''}
           </div>
           <button class="project-toggle" aria-expanded="false">
-            <span class="project-toggle-icon">↓</span>&nbsp;Expand
+            <span class="project-toggle-icon">↓</span><span class="project-toggle-label">Expand</span>
           </button>
         </div>
         <div class="project-expanded" aria-hidden="true">
@@ -80,8 +80,7 @@ function renderProjects() {
       const icon     = btn.querySelector('.project-toggle-icon');
       btn.setAttribute('aria-expanded', expanded);
       card.querySelector('.project-expanded').setAttribute('aria-hidden', !expanded);
-      icon.textContent = expanded ? '↑' : '↓';
-      btn.lastChild.textContent = ' ' + (expanded ? 'Collapse' : 'Expand');
+      btn.querySelector('.project-toggle-label').textContent = expanded ? 'Collapse' : 'Expand';
     });
   });
 }

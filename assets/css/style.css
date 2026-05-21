@@ -30,7 +30,10 @@
    RESET
    ============================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { font-size: 16px; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -340,7 +343,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .project-card.expanded .project-toggle-icon { transform: rotate(180deg); }
 
 .project-expanded    { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.project-card.expanded .project-expanded { max-height: 700px; }
+.project-card.expanded .project-expanded { max-height: 1200px; }
 .project-expanded-inner {
   padding: 20px 24px 24px;
   border-top: 1px solid var(--border);
