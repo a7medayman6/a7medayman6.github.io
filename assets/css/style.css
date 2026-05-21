@@ -264,9 +264,20 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .hero-bio {
   font-size: 1.05rem; color: var(--muted);
-  line-height: 1.7; margin-bottom: 32px;
+  line-height: 1.7; margin-bottom: 28px;
 }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+
+.hero-socials {
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+}
+.hero-social-link {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.875rem; color: var(--muted);
+  transition: color 0.2s;
+}
+.hero-social-link:hover { color: var(--accent); }
+.hero-social-link svg { flex-shrink: 0; }
 
 @media (max-width: 768px) {
   .hero-inner { flex-direction: column; align-items: flex-start; gap: 28px; padding-top: 40px; }

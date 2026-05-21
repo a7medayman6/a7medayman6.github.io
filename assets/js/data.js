@@ -249,7 +249,8 @@ const PRODUCTS = [
     ],
     stack: ['Electron', 'React', 'Vite', 'TypeScript'],
     github: 'https://github.com/a7medayman6/markdown-workspace',
-    live: null,
+    live: 'https://a7medayman6.github.io/markdown-workspace/',
+    liveLabel: 'Live Demo',
   },
 ];
 
