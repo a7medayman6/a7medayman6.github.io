@@ -44,11 +44,7 @@ function buildCardHTML(p, i, extraClass) {
   return `
     <div class="project-card ${extraClass || ''} reveal" data-index="${i}">
       <div class="project-card-compact">
-        ${extraClass === 'product-card' ? `
-          <div class="product-card-header">
-            ${p.faviconDomain ? `<img class="product-favicon" src="https://www.google.com/s2/favicons?domain=${p.faviconDomain}&sz=64" alt="" width="32" height="32" loading="lazy" />` : ''}
-            <span class="product-badge">Product</span>
-          </div>` : ''}
+        ${extraClass === 'product-card' ? '<span class="product-badge">Product</span>' : ''}
         <h3 class="project-title">${p.title}</h3>
         <p class="project-summary">${p.summary}</p>
         <div class="project-stack-preview chips">
