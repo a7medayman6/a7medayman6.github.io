@@ -153,6 +153,20 @@ const PROJECTS = [
     live: null,
   },
   {
+    title: '100 Days of LeetCode',
+    summary: 'Daily competitive programming challenge — 100 days of consistent algorithmic problem solving.',
+    description: 'A structured 100-day journey solving LeetCode problems daily to sharpen algorithmic thinking and data structures mastery. Each solution includes explanation and approach notes.',
+    features: [
+      '100 consecutive days of problem solving',
+      'Covers arrays, trees, graphs, dynamic programming, and more',
+      'Solutions with written approach notes and complexity analysis',
+      'Consistent daily streak demonstrating discipline and growth mindset',
+    ],
+    stack: ['Python', 'Algorithms', 'Data Structures'],
+    github: 'https://github.com/a7medayman6/100-Days-of-LeetCode',
+    live: null,
+  },
+  {
     title: 'Mapbox Offline Server',
     summary: 'Node.js tile caching proxy for serving Mapbox maps offline without internet.',
     description: 'Caches Mapbox tile requests to disk so maps can be served in air-gapped or low-connectivity environments. Works with any Mapbox GL JS client unchanged.',
