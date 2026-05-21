@@ -441,6 +441,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    ============================ */
 .contact-inner { text-align: center; max-width: 560px; margin: 0 auto; }
 .contact-sub   { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.contact-btns  { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.copy-email-btn { display: inline-flex; align-items: center; gap: 7px; }
+.copy-email-btn.copied { background: rgba(45,106,79,0.12); color: var(--accent); border-color: rgba(45,106,79,0.3); }
 .social-links  { display: flex; justify-content: center; gap: 20px; margin-top: 24px; }
 .social-links a {
   display: flex; align-items: center; justify-content: center;

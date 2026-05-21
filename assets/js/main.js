@@ -158,6 +158,23 @@ function initMobileNav() {
   }));
 }
 
+/* ---- COPY EMAIL ---- */
+function initCopyEmail() {
+  document.querySelectorAll('.copy-email-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(btn.dataset.email).then(() => {
+        const label = btn.querySelector('span');
+        label.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          label.textContent = 'Copy Email';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  });
+}
+
 /* ---- INIT ---- */
 document.addEventListener('DOMContentLoaded', () => {
   renderExperience();
@@ -168,4 +185,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initNavBlur();
   initMobileNav();
+  initCopyEmail();
 });
