@@ -93,13 +93,13 @@ All existing Hugo-generated files and folders are deleted before work begins.
 - **Default (compact) state:** title, one-liner description, top 3 stack chips, "↓ Expand" toggle button
 - **Expanded state (CSS max-height transition):** full description, feature bullets, all stack chips, GitHub link button + Live Demo button (if homepage exists)
 - 8 curated projects (source: resume + GitHub repos):
-  1. **Systems & Protocol Implementations** — Tiny Git, Tiny Redis, Tiny SQLite (Python) · GitHub links per sub-project
   2. **Musheer — AI Arabic Sign Language Tutor** — Python, TensorFlow, FastAPI, React · Play Store link · 50K+ downloads, 1st place ASU Innovates 2022
   3. **Standuply** — Node.js, Express, MongoDB, React, Vite · Live: standuply.vercel.app
-  4. **Env Box** — Next.js 14, TypeScript, MongoDB, Docker · GitHub + Live: env-box.vercel.app
   5. **Live Captions** — Android, ElevenLabs API · Play Store link · 100K+ users
   6. **Slide Craft** — TypeScript · Live: deck-craft-theta.vercel.app
   7. **Markdown Workspace** — Electron, React, Vite, TypeScript — desktop markdown editor
+  4. **Env Box** — Next.js 14, TypeScript, MongoDB, Docker · GitHub + Live: env-box.vercel.app
+  1. **Systems & Protocol Implementations** — Tiny Git, Tiny Redis, Tiny SQLite (Python) · GitHub links per sub-project
   8. **Mapbox Offline Server** — Node.js — tile caching server for offline map loading
 - Cards: `background: #fff`, `border: 1px solid #E8E3DA`, hover lift + deeper shadow
 

@@ -1,0 +1,191 @@
+%-------------------------
+% Resume in Latex — Ahmed Ayman | Software Engineer
+% Based on template by Jake Gutierrez
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubRole}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ahmed Ayman} \\ \vspace{1pt}
+    \small Cairo, Egypt $|$ (+2)~0102~8687~408 $|$
+    \href{mailto:a.ayman6000@gmail.com}{\underline{a.ayman6000@gmail.com}} $|$
+    \href{https://linkedin.com/in/a7medayman6}{\underline{LinkedIn}} $|$
+    \href{https://github.com/a7medayman6}{\underline{GitHub}} $|$
+    \href{https://a7medayman.hashnode.dev/}{\underline{Blog}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      Backend engineer with 3+ years owning production distributed systems and leading engineering teams.
+      Led and delivered fulfillment infrastructure processing \textbf{8K--14K+ daily orders} (2.5M+ total) for 1,500+ merchants, a social commerce platform serving \textbf{25K+ merchants} with 1M+ orders, and independently shipped an AI app with \textbf{50K+ downloads}.
+      Deep expertise in Node.js/TypeScript, event-driven microservices, GCP, and distributed systems design.
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://bosta.co/en-eg/home}{Bosta}}{Dec 2023 -- Present}
+      {Software Engineer -- Backend (Fulfillment)}{Jul 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected B2B fulfillment platform from greenfield for 1,500+ merchants on NestJS/TypeScript microservices (GCP Cloud Run, GKE, Pub/Sub), processing \textbf{8K--14K+ daily orders} (2.5M+ lifetime); integrated Shopify GraphQL API for end-to-end order lifecycle management.}
+        \resumeItem{Designed a high-throughput webhook ingestion service processing \textbf{2,000+ req/min} across 5+ external systems; implemented Pub/Sub fanout, idempotent event processing with ordering guarantees, retry/failure recovery, per-provider analytics, and a time-range replay API -- achieving zero webhook loss and no duplicate events during peak load.}
+        \resumeItem{Implemented Saga orchestration across order, inventory, and shipping services via Pub/Sub-driven compensating transactions, reducing order creation errors by \textbf{40\%} and eliminating orphaned order states during cross-service failures.}
+        \resumeItem{Built Kubernetes CronJobs for distributed state autocorrection and order aggregation pipelines powering merchant analytics reports; drove zero-downtime rollouts via \textbf{Unleash} feature flags across 1,500+ merchant accounts.}
+        \resumeItem{Profiled high-traffic APIs with \textbf{clinic.js} to identify and resolve Node.js event-loop stalls; restructured MySQL queries with composite indexes, cutting average order-to-ship cycle time by \textbf{30\%}.}
+        \resumeItem{Led and mentored 2 backend engineers on distributed systems patterns, API contract design, and production debugging practices.}
+        \resumeItem{Established Jest unit and integration test suites with Supertest achieving coverage on core order workflows; configured test-gated GitLab CI and GCP Cloud Build pipelines enabling safe same-day deployments.}
+      \resumeItemListEnd
+
+    \resumeSubRole{Software Engineer -- Backend (\href{https://sllr.co/}{Sllr})}{Dec 2023 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Owned and developed the core multi-tenant e-commerce platform (orders, inventory, products, store builder) serving \textbf{25K+} merchants and 1M+ orders; designed the data layer with \textbf{MySQL} for relational commerce data (orders, inventory, products, customer records, wallet payments) and \textbf{MongoDB} for schema-flexible conversational state; integrated \textbf{Elasticsearch} for product and catalog search across merchant storefronts.}
+        \resumeItem{Led architecture and end-to-end delivery of \textit{Sllr Chat} --- a unified social commerce inbox integrating Facebook and Instagram Graph API webhooks; designed FSM-based order management bot with dual-state architecture (Redis hot state + MongoDB durable state) and Pub/Sub-driven transitions; grew to \textbf{1M+ conversations} and \textbf{20M+ messages}.}
+        \resumeItem{Implemented custom \textbf{Paymob} wallet integration enabling direct payment settlement at storefront checkout, connecting merchant Paymob accounts to customer-facing checkout flows; participated in multi-tenant isolation refactor with per-tenant context middleware, row-level MySQL scoping, and schema migrations across the full order and inventory stack.}
+        \resumeItem{Participated in customer interviews and feedback surveys alongside the product team, translating user insights into technical requirements for the store builder and catalog modules.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research \& Development Center -- Air Defense Forces}{Dec 2022 -- Dec 2023}
+      {Software Engineer}{Cairo, Egypt}
+      \resumeItemListStart
+        \resumeItem{Led a team of 5 engineers to re-architect communication middleware and Command \& Control backend services to support 50$\times$ peak message volume by replacing synchronous RPC with an event-driven Redis ecosystem (Pub/Sub, caching, disk-persistence snapshots, geospatial search), increasing measured throughput by 40\%.}
+        \resumeItem{Containerized 8+ services with multi-stage Docker builds on Alpine images (60\% smaller); built GitLab CI/CD pipelines with parallel test execution and Docker layer caching, reducing build times by 35\%.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{Systems \& Protocol Implementations} $|$ \emph{Python} $|$ \href{https://github.com/a7medayman6/Tiny-Git}{Tiny Git}, \href{https://github.com/a7medayman6/Tiny-Redis}{Tiny Redis}, \href{https://github.com/a7medayman6/Tiny-SQLite}{Tiny SQLite}}{}
+        \resumeItemListStart
+          \resumeItem{Implemented Git internals (SHA-1 content-addressable DAG, staging index, diffing, commit traversal), a multithreaded TCP Redis server (RESP protocol, TTL expiration, disk persistence), and SQLite file format parsing with B-tree traversal and SELECT query execution --- built from first principles to understand production system internals.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Musheer -- AI Arabic Sign Language Tutor} $|$ \emph{Python, TensorFlow, FastAPI, React} $|$ \href{https://play.google.com/store/apps/details?id=com.musheer.musheer}{Play Store}}{}
+        \resumeItemListStart
+          \resumeItem{Built a custom Arabic Sign Language dataset (600 images/sign, multiple signers), trained an LSTM+CNN on MediaPipe Holistic keypoint outputs achieving \textbf{91\% accuracy}; \textbf{50K+ downloads}, \textbf{First Place} at ASU Innovates 2022 \& ibTIECar Metaverse.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Standuply} $|$ \emph{Node.js, Express, MongoDB, React, Vite} $|$ \href{https://standuply.vercel.app/}{Live}}{}
+        \resumeItemListStart
+          \resumeItem{Async standup platform for small teams and startups: private workspaces, text and voice update sharing, automated daily digest reports with team analytics; built full-stack end-to-end with a Node.js/Express/MongoDB backend and React/Vite frontend.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Env Box} $|$ \emph{Next.js 14, TypeScript, MongoDB, Docker} $|$ \href{https://github.com/a7medayman6/env-box}{GitHub} $|$ \href{https://env-box.vercel.app}{Live}}{}
+        \resumeItemListStart
+          \resumeItem{Open-source secrets management platform with AES-256 variable encryption, team RBAC, audit logging, and .env import/export across Dev/Staging/Prod environments; Dockerized with a live deployment.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Live Captions -- Real-Time Captioning App} $|$ \emph{Android, AI} $|$ \href{https://play.google.com/store/apps/details?id=com.tools.livecaptions}{Play Store}}{}
+        \resumeItemListStart
+          \resumeItem{Designed the audio chunking and streaming pipeline; evaluated on-device models vs.\ \textbf{ElevenLabs} managed transcription (accuracy vs.\ latency tradeoff), driving the switch to managed service for better quality and latency; \textbf{100K+ users} in production.}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Ain Shams University}{2018 -- 2022}
+        {B.Sc. in Computer Science -- Grade: Very Good}{Cairo, Egypt}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Node.js, TypeScript, Python, JavaScript, SQL, Bash \\
+     \textbf{Frameworks \& Testing:} NestJS, Express.js, FastAPI, Jest, Supertest \\
+     \textbf{Databases \& Search:} MySQL, MongoDB, Redis, Elasticsearch, RabbitMQ, GCP Pub/Sub, TypeORM, Mongoose \\
+     \textbf{Cloud \& DevOps:} GCP (Cloud Run, GKE, Cloud Build, Cloud Logging, BigQuery, Cloud Scheduler), Docker, Kubernetes, Linux, GitLab CI, GitHub Actions \\
+     \textbf{API \& Architecture:} REST, GraphQL, Swagger/OpenAPI, Microservices, Distributed Systems, Saga Orchestration, Event-Driven Architecture, Webhooks, Feature Flags (Unleash) \\
+     \textbf{Security \& Performance:} JWT, OAuth 2.0, RBAC, Rate Limiting, AES-256, clinic.js, Query Optimization, Caching
+    }}
+ \end{itemize}
+
+\end{document}
