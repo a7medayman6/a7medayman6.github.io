@@ -164,6 +164,7 @@ const PROJECTS = [
 const PRODUCTS = [
   {
     title: 'Musheer — AI Arabic Sign Language Tutor',
+    faviconDomain: 'play.google.com',
     summary: 'Real-time Arabic Sign Language tutor with 91% model accuracy and 50K+ Play Store downloads.',
     description: 'Built a custom Arabic Sign Language dataset (600 images/sign, multiple signers), trained an LSTM+CNN on MediaPipe Holistic keypoint outputs. Shipped as a mobile app with a FastAPI backend for real-time inference.',
     features: [
@@ -179,6 +180,7 @@ const PRODUCTS = [
   },
   {
     title: 'Live Captions — Real-Time Captioning App',
+    faviconDomain: 'play.google.com',
     summary: 'Android captioning app with 100K+ users — real-time speech-to-text via managed transcription.',
     description: 'Designed the audio chunking and streaming pipeline. Evaluated on-device models vs. ElevenLabs managed transcription on accuracy/latency tradeoffs; drove the switch to managed service for significantly better quality.',
     features: [
@@ -194,6 +196,7 @@ const PRODUCTS = [
   },
   {
     title: 'Slide Craft',
+    faviconDomain: 'deck-craft-theta.vercel.app',
     summary: 'Turn AI-generated content into a real presentation with one copy-paste — instant deck builder.',
     description: 'Slide Craft bridges the gap between AI-generated outlines and polished presentations. Paste your AI content, structure it into slides, and export a clean deck — no design skills needed. Built for the "generate with AI, ship as a deck" workflow.',
     features: [
@@ -209,6 +212,7 @@ const PRODUCTS = [
   },
   {
     title: 'Env Box',
+    faviconDomain: 'env-box.vercel.app',
     summary: 'Open-source secrets management — AES-256 encryption, team RBAC, audit logging, .env import/export.',
     description: 'Lightweight web app for managing environment variables across Dev/Staging/Prod environments with per-variable AES-256 encryption, team role-based access control, full audit trail, and .env file import/export.',
     features: [
@@ -225,6 +229,7 @@ const PRODUCTS = [
   },
   {
     title: 'Standuply',
+    faviconDomain: 'standuply.vercel.app',
     summary: 'Async standup platform — voice updates, private workspaces, and automated daily digest reports.',
     description: 'A remote-first async standup tool for small teams. Private workspaces, text and voice update recording, and automated daily digest emails with team analytics — no live meetings required.',
     features: [
@@ -239,6 +244,7 @@ const PRODUCTS = [
   },
   {
     title: 'Markdown Workspace',
+    faviconDomain: 'a7medayman6.github.io',
     summary: 'Desktop Markdown editor with workspace management, split-pane preview, and file tree.',
     description: 'A native-feeling desktop app for Markdown writers. Workspace-based file organization, live split-pane preview, and theme support — packaged as an Electron app for Mac, Windows, and Linux.',
     features: [
