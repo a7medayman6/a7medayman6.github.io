@@ -269,6 +269,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
 
 .hero-socials {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.hero-socials-row {
   display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
 }
 .hero-social-link {
@@ -278,6 +281,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .hero-social-link:hover { color: var(--accent); }
 .hero-social-link svg { flex-shrink: 0; }
+.hero-copy-email { margin-top: 12px; }
 
 @media (max-width: 768px) {
   .hero-inner { flex-direction: column; align-items: flex-start; gap: 28px; padding-top: 40px; }
