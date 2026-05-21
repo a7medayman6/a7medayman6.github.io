@@ -254,6 +254,65 @@ const PRODUCTS = [
   },
 ];
 
+const ARTICLES = [
+  {
+    title: 'Redis Stories & Architectural Debates',
+    slug: 'redis-stories-and-architectural-debates',
+    date: 'Mar 14, 2024',
+    readTime: '8 min read',
+    brief: 'Can Redis be used as a primary database? A deep dive into Redis architecture, use cases, and the ongoing debate around its role in modern systems.',
+  },
+  {
+    title: "Hardening your Linux server's security: a step-by-step guide",
+    slug: 'hardening-your-linux-servers-security-a-step-by-step-guide',
+    date: 'Mar 5, 2024',
+    readTime: '22 min read',
+    brief: "A comprehensive guide to securing your Linux servers — from SSH hardening and firewall setup to intrusion detection and audit logging.",
+  },
+  {
+    title: 'How To Create Automated Tests For Strapi API using PactumJS',
+    slug: 'how-to-create-automated-tests-for-strapi-api-using-pactumjs',
+    date: 'Oct 11, 2023',
+    readTime: '19 min read',
+    brief: 'Build a Strapi-backed To-Do API and cover it with automated tests using PactumJS — from setup to assertions and CI integration.',
+  },
+  {
+    title: 'Diving with the Whale V — Docker Compose and Multi-Container Apps',
+    slug: 'diving-with-the-whale-v-docker-compose-and-multi-container-apps',
+    date: 'Oct 7, 2023',
+    readTime: '5 min read',
+    brief: 'Orchestrate multi-container applications with Docker Compose — defining services, networks, and volumes in a single declarative file.',
+  },
+  {
+    title: 'Diving with the Whale IV — Docker Networking, Entry Points, and more.',
+    slug: 'diving-with-the-whale-iv-docker-networking-entry-points-and-more',
+    date: 'Oct 4, 2023',
+    readTime: '10 min read',
+    brief: 'How Docker containers communicate — bridge, host, and overlay networks explained, plus ENTRYPOINT vs CMD and multi-stage builds.',
+  },
+  {
+    title: 'Diving with the Whale III — Persisting Data & Dockerfiles',
+    slug: 'diving-with-the-whale-iii-persisting-data-dockerfiles',
+    date: 'Sep 23, 2023',
+    readTime: '7 min read',
+    brief: 'Containers are ephemeral — but your data doesn\'t have to be. Volumes, bind mounts, and writing production-ready Dockerfiles.',
+  },
+  {
+    title: 'Diving with the Whale II — Containers & Images Management',
+    slug: 'diving-with-the-whale-ii-containers-images-management',
+    date: 'Sep 23, 2023',
+    readTime: '7 min read',
+    brief: 'Managing the Docker lifecycle — pulling images, running containers, inspecting state, cleaning up, and understanding layers.',
+  },
+  {
+    title: 'Diving with the Whale I — Introduction to Docker',
+    slug: 'diving-with-the-whale-i-introduction-to-docker',
+    date: 'Sep 22, 2023',
+    readTime: '6 min read',
+    brief: 'What containers are, why they exist, and how Docker packages applications into portable, isolated units that run anywhere.',
+  },
+];
+
 const SKILLS = {
   Languages:           ['Node.js', 'TypeScript', 'Python', 'JavaScript', 'SQL', 'Bash'],
   Frameworks:          ['NestJS', 'Express.js', 'FastAPI', 'Jest', 'Supertest'],
