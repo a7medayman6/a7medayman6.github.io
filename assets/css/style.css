@@ -369,6 +369,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
 
 /* ============================
+   PRODUCTS
+   ============================ */
+#products { background: var(--bg); }
+
+.product-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-chip);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(45,106,79,0.12);
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* ============================
    SKILLS
    ============================ */
 #skills { background: var(--white); }

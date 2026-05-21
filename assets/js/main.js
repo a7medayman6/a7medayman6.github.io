@@ -32,57 +32,69 @@ function renderExperience() {
   `).join('');
 }
 
-/* ---- RENDER: PROJECTS ---- */
-function renderProjects() {
-  const container = document.getElementById('projects-container');
-  if (!container) return;
-
-  container.innerHTML = PROJECTS.map((p, i) => {
-    const previewStack = p.stack.slice(0, 3);
-    const links = [];
-    if (p.github) links.push(`<a href="${p.github}" target="_blank" rel="noopener noreferrer" class="project-link">GitHub ↗</a>`);
-    if (p.live)   links.push(`<a href="${p.live}"   target="_blank" rel="noopener noreferrer" class="project-link">${p.liveLabel || 'Live'} ↗</a>`);
-    if (p.extraLinks) p.extraLinks.forEach(l =>
-      links.push(`<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="project-link">${l.label} ↗</a>`)
-    );
-
-    return `
-      <div class="project-card reveal" data-index="${i}">
-        <div class="project-card-compact">
-          <h3 class="project-title">${p.title}</h3>
-          <p class="project-summary">${p.summary}</p>
-          <div class="project-stack-preview chips">
-            ${previewStack.map(s => `<span class="chip">${s}</span>`).join('')}
-            ${p.stack.length > 3 ? `<span class="chip">+${p.stack.length - 3} more</span>` : ''}
-          </div>
-          <button class="project-toggle" aria-expanded="false">
-            <span class="project-toggle-icon">↓</span><span class="project-toggle-label">Expand</span>
-          </button>
+/* ---- SHARED: CARD HTML ---- */
+function buildCardHTML(p, i, extraClass) {
+  const previewStack = p.stack.slice(0, 3);
+  const links = [];
+  if (p.github) links.push(`<a href="${p.github}" target="_blank" rel="noopener noreferrer" class="project-link">GitHub ↗</a>`);
+  if (p.live)   links.push(`<a href="${p.live}"   target="_blank" rel="noopener noreferrer" class="project-link">${p.liveLabel || 'Live'} ↗</a>`);
+  if (p.extraLinks) p.extraLinks.forEach(l =>
+    links.push(`<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="project-link">${l.label} ↗</a>`)
+  );
+  return `
+    <div class="project-card ${extraClass || ''} reveal" data-index="${i}">
+      <div class="project-card-compact">
+        ${extraClass === 'product-card' ? '<span class="product-badge">Product</span>' : ''}
+        <h3 class="project-title">${p.title}</h3>
+        <p class="project-summary">${p.summary}</p>
+        <div class="project-stack-preview chips">
+          ${previewStack.map(s => `<span class="chip">${s}</span>`).join('')}
+          ${p.stack.length > 3 ? `<span class="chip">+${p.stack.length - 3} more</span>` : ''}
         </div>
-        <div class="project-expanded" aria-hidden="true">
-          <div class="project-expanded-inner">
-            <p class="project-description">${p.description}</p>
-            <p class="project-expanded-label">Features</p>
-            <ul class="project-features">${p.features.map(f => `<li>${f}</li>`).join('')}</ul>
-            <p class="project-expanded-label">Stack</p>
-            <div class="chips">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
-            ${links.length ? `<div class="project-links">${links.join('')}</div>` : ''}
-          </div>
+        <button class="project-toggle" aria-expanded="false">
+          <span class="project-toggle-icon">↓</span><span class="project-toggle-label">Expand</span>
+        </button>
+      </div>
+      <div class="project-expanded" aria-hidden="true">
+        <div class="project-expanded-inner">
+          <p class="project-description">${p.description}</p>
+          <p class="project-expanded-label">Features</p>
+          <ul class="project-features">${p.features.map(f => `<li>${f}</li>`).join('')}</ul>
+          <p class="project-expanded-label">Stack</p>
+          <div class="chips">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+          ${links.length ? `<div class="project-links">${links.join('')}</div>` : ''}
         </div>
       </div>
-    `;
-  }).join('');
+    </div>
+  `;
+}
 
-  document.querySelectorAll('.project-toggle').forEach(btn => {
+function attachToggleListeners(container) {
+  container.querySelectorAll('.project-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       const card     = btn.closest('.project-card');
       const expanded = card.classList.toggle('expanded');
-      const icon     = btn.querySelector('.project-toggle-icon');
       btn.setAttribute('aria-expanded', expanded);
       card.querySelector('.project-expanded').setAttribute('aria-hidden', !expanded);
       btn.querySelector('.project-toggle-label').textContent = expanded ? 'Collapse' : 'Expand';
     });
   });
+}
+
+/* ---- RENDER: PROJECTS ---- */
+function renderProjects() {
+  const container = document.getElementById('projects-container');
+  if (!container) return;
+  container.innerHTML = PROJECTS.map((p, i) => buildCardHTML(p, i, '')).join('');
+  attachToggleListeners(container);
+}
+
+/* ---- RENDER: PRODUCTS ---- */
+function renderProducts() {
+  const container = document.getElementById('products-container');
+  if (!container) return;
+  container.innerHTML = PRODUCTS.map((p, i) => buildCardHTML(p, i, 'product-card')).join('');
+  attachToggleListeners(container);
 }
 
 /* ---- RENDER: SKILLS ---- */
@@ -150,6 +162,7 @@ function initMobileNav() {
 document.addEventListener('DOMContentLoaded', () => {
   renderExperience();
   renderProjects();
+  renderProducts();
   renderSkills();
   initReveal();
   initActiveNav();
