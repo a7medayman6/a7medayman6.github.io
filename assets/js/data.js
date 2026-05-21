@@ -49,6 +49,34 @@ const EXPERIENCE = [
 /* ---- Engineering / open-source projects ---- */
 const PROJECTS = [
   {
+    title: 'Webhook Ingester',
+    summary: 'Internal high-throughput webhook ingestion service processing 2,000+ req/min across 5+ external systems.',
+    description: 'Production internal tool built at Bosta to reliably ingest, fan out, and replay webhook events from external providers. Designed for zero data loss and zero duplicate delivery even under peak load.',
+    features: [
+      '2,000+ req/min ingestion throughput across 5+ provider integrations',
+      'Pub/Sub fanout with idempotent event processing and ordering guarantees',
+      'Retry pipeline with failure recovery and dead-letter handling',
+      'Per-provider analytics dashboard',
+      'Time-range replay API for backfilling missed events',
+    ],
+    stack: ['NestJS', 'TypeScript', 'GCP Pub/Sub', 'MySQL'],
+    github: null,
+    live: null,
+  },
+  {
+    title: 'Mapbox Offline Server',
+    summary: 'Node.js tile caching proxy for serving Mapbox maps in air-gapped or offline environments.',
+    description: 'Caches Mapbox tile requests to disk so maps can be served without internet. Transparent to any Mapbox GL JS client — drop-in for restricted-network deployments.',
+    features: [
+      'Transparent tile request proxying and local disk cache',
+      'Zero changes required to Mapbox GL JS client code',
+      'Configurable cache directory and tile style targets',
+    ],
+    stack: ['Node.js', 'JavaScript'],
+    github: 'https://github.com/a7medayman6/Mapbox-Offline-Server',
+    live: null,
+  },
+  {
     title: 'Tiny Git',
     summary: 'Git internals re-implemented from scratch — DAG, staging index, diffing, and commit traversal.',
     description: 'A ground-up Python implementation of Git core internals built to deeply understand how version control works under the hood.',
@@ -102,34 +130,6 @@ const PROJECTS = [
     ],
     stack: ['Python'],
     github: 'https://github.com/a7medayman6/Tiny-Compiler',
-    live: null,
-  },
-  {
-    title: 'Webhook Ingester',
-    summary: 'Internal high-throughput webhook ingestion service processing 2,000+ req/min across 5+ external systems.',
-    description: 'Production internal tool built at Bosta to reliably ingest, fan out, and replay webhook events from external providers. Designed for zero data loss and zero duplicate delivery even under peak load.',
-    features: [
-      '2,000+ req/min ingestion throughput across 5+ provider integrations',
-      'Pub/Sub fanout with idempotent event processing and ordering guarantees',
-      'Retry pipeline with failure recovery and dead-letter handling',
-      'Per-provider analytics dashboard',
-      'Time-range replay API for backfilling missed events',
-    ],
-    stack: ['NestJS', 'TypeScript', 'GCP Pub/Sub', 'MySQL'],
-    github: null,
-    live: null,
-  },
-  {
-    title: 'Mapbox Offline Server',
-    summary: 'Node.js tile caching proxy for serving Mapbox maps in air-gapped or offline environments.',
-    description: 'Caches Mapbox tile requests to disk so maps can be served without internet. Transparent to any Mapbox GL JS client — drop-in for restricted-network deployments.',
-    features: [
-      'Transparent tile request proxying and local disk cache',
-      'Zero changes required to Mapbox GL JS client code',
-      'Configurable cache directory and tile style targets',
-    ],
-    stack: ['Node.js', 'JavaScript'],
-    github: 'https://github.com/a7medayman6/Mapbox-Offline-Server',
     live: null,
   },
   {
