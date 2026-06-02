@@ -196,7 +196,7 @@ const PRODUCTS = [
       'Bring-your-own-key model — no server-side keys stored',
     ],
     stack: ['React 19', 'Vite 5', 'TypeScript', 'Supabase', 'Claude API'],
-    github: 'https://github.com/a7medayman6/scriptit-app',
+    github: null,
     live: 'https://scriptit-app.vercel.app/',
     liveLabel: 'Live Link',
   },
