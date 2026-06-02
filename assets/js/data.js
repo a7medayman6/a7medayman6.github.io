@@ -163,6 +163,44 @@ const PROJECTS = [
 /* ---- Shipped products & apps ---- */
 const PRODUCTS = [
   {
+    title: 'Co Spnd',
+    summary: 'Minimalist shared expense tracker — fast logging, collaborative analytics, and budget tracking for groups.',
+    description: 'A shared expense tracking app for couples, roommates, and travel parties. Create workspaces, invite members, and log expenses collaboratively. Provides clear financial analytics showing spending patterns by category, person, and time period, plus monthly budget tracking.',
+    features: [
+      'Fast expense logging with auto-population from bank notifications',
+      'Group management with workspace-based sharing',
+      'Analytics dashboard with category and person breakdowns',
+      'Month-to-month trend comparison with percentage deltas',
+      'Budget tracking with color-coded progress indicators',
+      'Mobile-first design optimized for one-hand use',
+      'Monthly browsing with prev/next navigation',
+    ],
+    stack: ['React', 'Vite', 'NestJS', 'MongoDB'],
+    github: 'https://github.com/a7medayman6/co-spnd',
+    live: 'https://co-spnd.vercel.app/',
+    liveLabel: 'Live Demo',
+  },
+  {
+    title: 'Scriptit',
+    summary: 'AI-powered conversation rehearsal app — practice difficult conversations with realistic roleplay and AI coaching.',
+    description: 'Rehearse high-stakes conversations like salary negotiation, breaking up, or setting boundaries with an AI that plays the other person realistically. After each session, an AI coach analyzes your messages, scores your performance, and highlights what worked and what needs improvement. Ships with 12 pre-built scenarios plus custom scenario builder for Pro users.',
+    features: [
+      'Multi-turn roleplay with difficulty levels (supportive, realistic, difficult)',
+      'AI coach feedback with score, strengths, and specific improvements',
+      'Session history with replay and per-message coaching notes',
+      'Quick 5-challenge warm-up mode',
+      'Hint suggestions mid-conversation',
+      'Progress tracking with streaks and activity heatmap',
+      'Session sharing and PDF export',
+      'Custom scenario builder (Pro)',
+      'Bring-your-own-key model — no server-side keys stored',
+    ],
+    stack: ['React 19', 'Vite 5', 'TypeScript', 'Supabase', 'Claude API'],
+    github: 'https://github.com/a7medayman6/scriptit-app',
+    live: 'https://scriptit-app.vercel.app/',
+    liveLabel: 'Live Demo',
+  },
+  {
     title: 'Musheer — AI Arabic Sign Language Tutor',
     summary: 'Real-time Arabic Sign Language tutor with 91% model accuracy and 50K+ Play Store downloads.',
     description: 'Built a custom Arabic Sign Language dataset (600 images/sign, multiple signers), trained an LSTM+CNN on MediaPipe Holistic keypoint outputs. Shipped as a mobile app with a FastAPI backend for real-time inference.',
@@ -314,10 +352,10 @@ const ARTICLES = [
 ];
 
 const SKILLS = {
-  Languages:           ['Node.js', 'TypeScript', 'Python', 'JavaScript', 'SQL', 'Bash'],
-  Frameworks:          ['NestJS', 'Express.js', 'FastAPI', 'Jest', 'Supertest'],
-  'Databases & Search':['MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'RabbitMQ', 'GCP Pub/Sub'],
-  'Cloud & DevOps':    ['GCP', 'Docker', 'Kubernetes', 'GitLab CI', 'GitHub Actions', 'Linux'],
-  Architecture:        ['Microservices', 'Event-Driven', 'Saga Orchestration', 'REST', 'GraphQL', 'Webhooks'],
-  'Tools & Security':  ['JWT', 'OAuth 2.0', 'RBAC', 'AES-256', 'clinic.js', 'Unleash', 'TypeORM'],
+  Languages: ['Node.js', 'TypeScript', 'Python', 'JavaScript', 'SQL', 'Bash'],
+  Frameworks: ['NestJS', 'Express.js', 'FastAPI', 'Jest', 'Supertest'],
+  'Databases & Search': ['MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'RabbitMQ', 'GCP Pub/Sub'],
+  'Cloud & DevOps': ['GCP', 'Docker', 'Kubernetes', 'GitLab CI', 'GitHub Actions', 'Linux'],
+  Architecture: ['Microservices', 'Event-Driven', 'Saga Orchestration', 'REST', 'GraphQL', 'Webhooks'],
+  'Tools & Security': ['JWT', 'OAuth 2.0', 'RBAC', 'AES-256', 'clinic.js', 'Unleash', 'TypeORM'],
 };
