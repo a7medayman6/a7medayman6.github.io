@@ -178,7 +178,7 @@ const PRODUCTS = [
     stack: ['React', 'Vite', 'NestJS', 'MongoDB'],
     github: 'https://github.com/a7medayman6/co-spnd',
     live: 'https://co-spnd.vercel.app/',
-    liveLabel: 'Live Demo',
+    liveLabel: 'Live Link',
   },
   {
     title: 'Scriptit',
@@ -198,7 +198,7 @@ const PRODUCTS = [
     stack: ['React 19', 'Vite 5', 'TypeScript', 'Supabase', 'Claude API'],
     github: 'https://github.com/a7medayman6/scriptit-app',
     live: 'https://scriptit-app.vercel.app/',
-    liveLabel: 'Live Demo',
+    liveLabel: 'Live Link',
   },
   {
     title: 'Musheer — AI Arabic Sign Language Tutor',
@@ -243,7 +243,7 @@ const PRODUCTS = [
     stack: ['TypeScript'],
     github: 'https://github.com/a7medayman6/slide-craft',
     live: 'https://deck-craft-theta.vercel.app',
-    liveLabel: 'Live Demo',
+    liveLabel: 'Live Link',
   },
   {
     title: 'Env Box',
@@ -259,7 +259,7 @@ const PRODUCTS = [
     stack: ['Next.js 14', 'TypeScript', 'MongoDB', 'Docker'],
     github: 'https://github.com/a7medayman6/env-box',
     live: 'https://env-box.vercel.app',
-    liveLabel: 'Live Demo',
+    liveLabel: 'Live Link',
   },
   {
     title: 'Standuply',
@@ -273,7 +273,7 @@ const PRODUCTS = [
     stack: ['Node.js', 'Express', 'MongoDB', 'React', 'Vite'],
     github: null,
     live: 'https://standuply.vercel.app',
-    liveLabel: 'Live Demo',
+    liveLabel: 'Live Link',
   },
   {
     title: 'Markdown Workspace',
@@ -288,7 +288,7 @@ const PRODUCTS = [
     stack: ['Electron', 'React', 'Vite', 'TypeScript'],
     github: 'https://github.com/a7medayman6/markdown-workspace',
     live: 'https://a7medayman6.github.io/markdown-workspace/',
-    liveLabel: 'Live Demo',
+    liveLabel: 'Live Link',
   },
 ];
 
